@@ -1,0 +1,22 @@
+{
+  "name": "amazon-testing",
+  "version": "1.0.0",
+  "description": "Cypress E2E testing for Amazon.de",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "cypress:run:headless": "cypress run --headless --browser chrome",
+    "lint": "eslint 'cypress/**/*.ts'",
+    "format": "prettier --write 'cypress/**/*.ts'"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
+    "cypress": "^15.10.0",
+    "eslint": "^10.0.1",
+    "eslint-plugin-cypress": "^6.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  }
+}
