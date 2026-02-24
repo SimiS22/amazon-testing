@@ -16,6 +16,16 @@ describe("Amazon Kinderschuhe Search and Checkout Flow", () => {
         cy.log("Verify product page and add to cart");
         productPage.verifyPageLoaded();
         productPage.addToCart();
+        cy.log("Go to cart and verify product is present");
+        productPage.goToCart();
+        cartPage.verifyInCart();
 
+        cy.log("Increase quantity to 3");
+        cartPage.changeQuantity(3);
+
+        cy.log("Proceed to checkout");
+        cartPage.proceedToCheckout();
+
+        cy.url().should("include", "/signin");
     });
 });
